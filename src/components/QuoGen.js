@@ -21,9 +21,9 @@ class QuoGen extends React.Component{
         </CardContent>
         <CardActions>
         <Button size="small" id="new-quote"  onClick={this.props.anotherIndex}>Next Quote</Button>
-        <Button size="small" id="tweet-quote" href={`https://www.twitter.com/intent/tweet?text="${!this.props.selectedQuote? "":
+        <Button size="small" id="tweet-quote" href={encodeURI(`https://www.twitter.com/intent/tweet?text="${!this.props.selectedQuote? "":
         this.props.selectedQuote.quote}" - ${!this.props.selectedQuote? "":
-        this.props.selectedQuote.author}`} target="_blank">Tweet!</Button>
+        this.props.selectedQuote.author}`)}target="_blank">Tweet!</Button>
         </CardActions>
       </Card>
     )
